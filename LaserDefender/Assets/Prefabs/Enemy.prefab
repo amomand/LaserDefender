@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7361698484485968913}
   - component: {fileID: 7361698484485968912}
   - component: {fileID: 5576631221759412664}
+  - component: {fileID: 3539410495530045861}
+  - component: {fileID: 3825325785420777416}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -93,5 +95,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06cf6be2eb2384b4a8b3a9678a23cf9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveConfig: {fileID: 11400000, guid: 9b525ec2d490d4c529f2c8b0ba666066, type: 2}
-  moveSpeed: 2
+--- !u!114 &3539410495530045861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7361698484485968915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cab5de4227814b21a753d00ddabd5cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+--- !u!58 &3825325785420777416
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7361698484485968915}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.465
