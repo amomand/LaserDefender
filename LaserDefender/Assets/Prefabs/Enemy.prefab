@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 5576631221759412664}
   - component: {fileID: 3539410495530045861}
   - component: {fileID: 3825325785420777416}
+  - component: {fileID: 6845825281629842476}
+  - component: {fileID: 3463270152344453068}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
@@ -108,15 +110,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  scoreValue: 150
   shotCounter: 0
   minTimeBetweenShots: 0.2
-  maxTimeBetweenShots: 3
+  maxTimeBetweenShots: 2
   projectile: {fileID: 2325069848968217028, guid: b4b5739b926344cf78d493c557aa8204,
     type: 3}
   projectileSpeed: 10
   deathVFX: {fileID: 2916140784876221023, guid: 9efdd47fa7324485fa81a1820f34e12f,
     type: 3}
   durationOfExplosion: 1
+  deathSound: {fileID: 8300000, guid: 19839b13a32dc496f8ef9d1f7eedd84e, type: 3}
+  deathSoundVolume: 0.7
+  shootSound: {fileID: 8300000, guid: 25d6e28cc81834173b0ee2203e7c79db, type: 3}
+  shootSoundVolume: 0.5
 --- !u!58 &3825325785420777416
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -127,9 +134,43 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.465
+--- !u!50 &6845825281629842476
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7361698484485968915}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &3463270152344453068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7361698484485968915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7755114d8edc44264b5c59cf716ec2ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 300
