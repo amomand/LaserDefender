@@ -85,6 +85,7 @@ public class Player : MonoBehaviour
         damageDealer.Hit();
         if (health <= 0)
         {
+            health = 0;
             Die();
         }
         else
@@ -105,6 +106,11 @@ public class Player : MonoBehaviour
     public int GetHealth()
     {
         return health;
+    }
+
+    public void SetHealth(int newHealth)
+    {
+        health = newHealth;
     }
 
     private void SetUpMoveBoundaries()
